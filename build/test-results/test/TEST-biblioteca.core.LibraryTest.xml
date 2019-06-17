@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="biblioteca.core.LibraryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-06-17T07:07:09" hostname="THKanisornS.local" time="0.008">
+<testsuite name="biblioteca.core.LibraryTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-17T07:19:01" hostname="THKanisornS.local" time="0.007">
   <properties/>
-  <testcase name="sayWelcome" classname="biblioteca.core.LibraryTest" time="0.008"/>
+  <testcase name="whenCallSayWelcomeMethodShouldBePrintOutWelcomeMessage" classname="biblioteca.core.LibraryTest" time="0.005"/>
+  <testcase name="whenCallShowAllBooksShouldBePrintOutListOfBooks" classname="biblioteca.core.LibraryTest" time="0.001"/>
   <system-out><![CDATA[Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!
+Clean Code (2008) Robert C. Martin
+The Refactoring (1999) Martin Fowler
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

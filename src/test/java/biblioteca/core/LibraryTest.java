@@ -2,6 +2,7 @@ package biblioteca.core;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.CoreMatchers.containsString;
+
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
@@ -19,8 +20,23 @@ public class LibraryTest {
     }
 
     @Test
-    public void sayWelcome() {
+    public void whenCallSayWelcomeMethodShouldBePrintOutWelcomeMessage() {
         this.library.sayWelcome();
-        assertThat(log.getLog(), containsString("Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!"));
+
+        String actual = log.getLog();
+        String expected = "Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!";
+
+        assertThat(actual, containsString(expected));
+    }
+
+    @Test
+    public void whenCallShowAllBooksShouldBePrintOutListOfBooks() {
+        this.library.showAllBooks();
+
+        String actual = log.getLog();
+        String expected = "Clean Code (2008) Robert C. Martin\n"
+                + "The Refactoring (1999) Martin Fowler\n";
+
+        assertThat(actual, containsString(expected));
     }
 }
