@@ -45,7 +45,17 @@ public class LibraryTest {
     }
 
     @Test
-    public void whenEnter1InConsoleShouldBeShowListOfBooks() {
+    public void whenCallShowMenusShouldBePrintOutMenus() {
+        this.library.showMenus();
+
+        String actual = log.getLog();
+        String expected = "------------------- Menu -------------------";
+
+        assertThat(actual, containsString(expected));
+    }
+
+    @Test
+    public void whenCallRunMethodAndEnter1InConsoleShouldBeShowListOfBooks() {
         systemInMock.provideLines("1"); // Enter "1" to system.in
         this.library.run();
 
