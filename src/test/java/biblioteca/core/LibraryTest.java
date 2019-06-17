@@ -27,6 +27,8 @@ public class LibraryTest {
     @Before
     public void setUp() {
         this.library = new Library();
+        this.library.addBook(new Book("Clean Code", "2008", "Robert C. Martin"));
+        this.library.addBook(new Book("The Refactoring", "1999", "Martin Fowler"));
     }
 
     @Test
