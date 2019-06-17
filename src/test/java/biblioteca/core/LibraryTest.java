@@ -31,7 +31,7 @@ public class LibraryTest {
 
     @Test
     public void whenCallShowAllBooksShouldBePrintOutListOfBooks() {
-        this.library.showAllBooks();
+        this.library.showListOfBooks();
 
         String actual = log.getLog();
         String expected = "Clean Code (2008) Robert C. Martin\n"
