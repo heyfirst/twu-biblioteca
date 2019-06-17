@@ -7,12 +7,16 @@ import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.contrib.java.lang.system.SystemOutRule;
+import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
 public class LibraryTest {
     private Library library;
 
     @Rule
     public final SystemOutRule log = new SystemOutRule().enableLog();
+
+    @Rule
+    public final TextFromStandardInputStream systemInMock = TextFromStandardInputStream.emptyStandardInputStream();
 
     @Before
     public void setUp() {
@@ -30,8 +34,20 @@ public class LibraryTest {
     }
 
     @Test
-    public void whenCallShowAllBooksShouldBePrintOutListOfBooks() {
+    public void whenCallShowAllBooksShouldBeShowListOfBooks() {
         this.library.showListOfBooks();
+
+        String actual = log.getLog();
+        String expected = "Clean Code (2008) Robert C. Martin\n"
+                + "The Refactoring (1999) Martin Fowler\n";
+
+        assertThat(actual, containsString(expected));
+    }
+
+    @Test
+    public void whenEnter1InConsoleShouldBeShowListOfBooks() {
+        systemInMock.provideLines("1"); // Enter "1" to system.in
+        this.library.run();
 
         String actual = log.getLog();
         String expected = "Clean Code (2008) Robert C. Martin\n"
