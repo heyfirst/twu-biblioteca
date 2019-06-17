@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ebc1319-e472-4ba5-97dc-72f7801f4860" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/biblioteca/core/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/biblioteca/core/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/biblioteca/core/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/biblioteca/core/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/biblioteca/core/LibraryTest.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/biblioteca.core.LibraryTest.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/base-style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/css/style.css" beforeDir="false" />
@@ -9,9 +23,12 @@
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/js/report.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/biblioteca.core.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-biblioteca.core.LibraryTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/biblioteca/core/BookTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/biblioteca/core/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/biblioteca/core/LibraryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -49,34 +66,43 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/BibliotecaApp.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/biblioteca/core/LibraryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+            <state relative-caret-position="418">
+              <caret line="112" column="80" selection-start-line="112" selection-start-column="80" selection-end-line="112" selection-end-column="80" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+            <state relative-caret-position="336">
+              <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1379#1380#0" expanded="true" />
+                <element signature="e#1464#1465#0" expanded="true" />
+                <element signature="e#1531#1532#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/biblioteca/core/LibraryTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+            <state relative-caret-position="544">
+              <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1442#1443#0" expanded="true" />
+                <element signature="e#1472#1473#0" expanded="true" />
+                <element signature="e#1605#1606#0" expanded="true" />
+                <element signature="e#1644#1645#0" expanded="true" />
+                <element signature="e#1698#1699#0" expanded="true" />
+                <element signature="e#1735#1736#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -87,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -99,10 +125,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/biblioteca/BibliotecaApp.java" />
+        <option value="$PROJECT_DIR$/src/test/java/biblioteca/core/BookTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java" />
         <option value="$PROJECT_DIR$/src/test/java/biblioteca/core/LibraryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java" />
       </list>
     </option>
   </component>
@@ -222,19 +249,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Gradle.LibraryTest">
-    <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="biblioteca.BibliotecaApp" />
-      <module name="biblioteca.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="biblioteca.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Gradle Build / Run" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -272,6 +286,26 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
+    <configuration name="LibraryTest.whenAddBookShouldBeHaveNewBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;biblioteca.core.LibraryTest.whenAddBookShouldBeHaveNewBook&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="LibraryTest.whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -292,12 +326,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LibraryTest.whenCallRunMethodShouldBeShowMenu" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest.whenCheckoutBookByIndex1ShouldBeHaveNotAvailableBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;biblioteca.core.LibraryTest.whenCallRunMethodShouldBeShowMenu&quot;" />
+        <option name="scriptParameters" value="--tests &quot;biblioteca.core.LibraryTest.whenCheckoutBookByIndex1ShouldBeHaveNotAvailableBook&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -312,12 +346,12 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="LibraryTest.whenCallShowMenusShouldBePrintOutMenus" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="LibraryTest.whenCheckoutBookByIndexShouldBeHaveNotAvailableBook" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;biblioteca.core.LibraryTest.whenCallShowMenusShouldBePrintOutMenus&quot;" />
+        <option name="scriptParameters" value="--tests &quot;biblioteca.core.LibraryTest.whenCheckoutBookByIndexShouldBeHaveNotAvailableBook&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -335,18 +369,18 @@
     <list>
       <item itemvalue="Gradle.Gradle Build / Run" />
       <item itemvalue="Gradle.LibraryTest" />
-      <item itemvalue="Gradle.LibraryTest.whenCallRunMethodShouldBeShowMenu" />
-      <item itemvalue="Gradle.LibraryTest.whenCallShowMenusShouldBePrintOutMenus" />
-      <item itemvalue="Application.BibliotecaApp" />
       <item itemvalue="Gradle.LibraryTest.whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram" />
+      <item itemvalue="Gradle.LibraryTest.whenAddBookShouldBeHaveNewBook" />
+      <item itemvalue="Gradle.LibraryTest.whenCheckoutBookByIndex1ShouldBeHaveNotAvailableBook" />
+      <item itemvalue="Gradle.LibraryTest.whenCheckoutBookByIndexShouldBeHaveNotAvailableBook" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.LibraryTest" />
+        <item itemvalue="Gradle.LibraryTest.whenCheckoutBookByIndexShouldBeHaveNotAvailableBook" />
+        <item itemvalue="Gradle.LibraryTest.whenCheckoutBookByIndex1ShouldBeHaveNotAvailableBook" />
+        <item itemvalue="Gradle.LibraryTest.whenAddBookShouldBeHaveNewBook" />
         <item itemvalue="Gradle.LibraryTest.whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram" />
-        <item itemvalue="Application.BibliotecaApp" />
-        <item itemvalue="Gradle.LibraryTest.whenCallShowMenusShouldBePrintOutMenus" />
-        <item itemvalue="Gradle.LibraryTest.whenCallRunMethodShouldBeShowMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -361,23 +395,11 @@
       <option name="presentableId" value="Default" />
       <updated>1560754236370</updated>
       <workItem from="1560754237824" duration="711000" />
-      <workItem from="1560755174982" duration="2889000" />
+      <workItem from="1560755174982" duration="5978000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="LibraryTest - 2019.06.17 at 14h 38m 44s.xml">
-      <configuration name="LibraryTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="LibraryTest - 2019.06.17 at 14h 39m 12s.xml">
-      <configuration name="LibraryTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="LibraryTest - 2019.06.17 at 14h 40m 40s.xml">
-      <configuration name="LibraryTest" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="LibraryTest_whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram - 2019.06.17 at 14h 43m 33s.xml">
-      <configuration name="LibraryTest.whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="LibraryTest_whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram - 2019.06.17 at 14h 46m 25s.xml">
       <configuration name="LibraryTest.whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -396,9 +418,21 @@
     <history-entry file="LibraryTest - 2019.06.17 at 14h 54m 50s.xml">
       <configuration name="LibraryTest" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="LibraryTest - 2019.06.17 at 15h 38m 42s.xml">
+      <configuration name="LibraryTest" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="LibraryTest_whenAddBookShouldBeHaveNewBook - 2019.06.17 at 15h 46m 30s.xml">
+      <configuration name="LibraryTest.whenAddBookShouldBeHaveNewBook" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="LibraryTest_whenAddBookShouldBeHaveNewBook - 2019.06.17 at 15h 46m 54s.xml">
+      <configuration name="LibraryTest.whenAddBookShouldBeHaveNewBook" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="LibraryTest_whenCheckoutBookByIndex1ShouldBeHaveNotAvailableBook - 2019.06.17 at 15h 48m 50s.xml">
+      <configuration name="LibraryTest.whenCheckoutBookByIndex1ShouldBeHaveNotAvailableBook" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3600000" />
+    <option name="totallyTimeSpent" value="6689000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -413,7 +447,7 @@
     <frame x="0" y="23" width="1920" height="1138" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992764" visible="true" weight="0.25239617" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4992764" visible="true" weight="0.25239617" />
       <window_info id="Structure" order="1" sideWeight="0.5007236" side_tool="true" weight="0.25239617" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -422,7 +456,7 @@
       <window_info id="Favorites" order="6" sideWeight="0.5007236" side_tool="true" weight="0.25239617" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3291262" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3291262" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -473,53 +507,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/biblioteca/core/BookTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
-          <folding>
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#375#376#0" expanded="true" />
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#467#468#0" expanded="true" />
-            <element signature="e#507#508#0" expanded="true" />
-            <element signature="e#539#540#0" expanded="true" />
-            <element signature="e#572#573#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-            <element signature="e#645#646#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="40">
+          <caret line="21" column="28" lean-forward="true" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/BibliotecaApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1472#1473#0" expanded="true" />
+            <element signature="e#1605#1606#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1698#1699#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/biblioteca/core/LibraryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="88" column="5" lean-forward="true" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
+        <state relative-caret-position="418">
+          <caret line="112" column="80" selection-start-line="112" selection-start-column="80" selection-end-line="112" selection-end-column="80" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Library.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/biblioteca/core/Book.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="28" column="13" lean-forward="true" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
+        <state relative-caret-position="336">
+          <caret line="16" column="78" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1379#1380#0" expanded="true" />
+            <element signature="e#1464#1465#0" expanded="true" />
+            <element signature="e#1531#1532#0" expanded="true" />
           </folding>
         </state>
       </provider>

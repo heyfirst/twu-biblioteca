@@ -10,6 +10,8 @@ import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
+import java.util.ArrayList;
+
 public class LibraryTest {
     private Library library;
 
@@ -86,5 +88,30 @@ public class LibraryTest {
         exit.expectSystemExit();
         systemInMock.provideLines("-1"); // Enter "string" to system.in
         this.library.run();
+    }
+
+    @Test
+    public void whenAddBookShouldBeHaveNewBook() {
+        Library library = new Library();
+        library.addBook(new Book("Clean Code", "2008", "Robert C. Martin"));
+
+        ArrayList actual = library.getListOfBooks();
+        ArrayList expected = new ArrayList<Book>() {{
+            add(new Book("Clean Code", "2008", "Robert C. Martin"));
+        }};
+
+        assertArrayEquals(actual.toArray(), expected.toArray());
+    }
+
+    @Test
+    public void whenCheckoutBookByIndexShouldBeHaveNotAvailableBook() {
+        Library library = new Library();
+        library.addBook(new Book("Clean Code", "2008", "Robert C. Martin"));
+        library.checkoutBookByIndex(0);
+
+        Book actual = library.getListOfBooks().get(0);
+        Book expected = new Book("Clean Code", "2008", "Robert C. Martin", false);
+
+        assertEquals(actual, expected);
     }
 }

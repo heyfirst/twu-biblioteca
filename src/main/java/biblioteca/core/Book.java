@@ -1,14 +1,24 @@
 package biblioteca.core;
 
+import java.util.Objects;
+
 public class Book {
     private String title;
     private String year;
     private String author;
+    private Boolean available = true;
 
     public Book(String title, String year, String author) {
         this.title = title;
         this.year = year;
         this.author = author;
+    }
+
+    public Book(String title, String year, String author, Boolean available) {
+        this.title = title;
+        this.year = year;
+        this.author = author;
+        this.available = available;
     }
 
     @Override
@@ -40,4 +50,27 @@ public class Book {
         this.author = author;
     }
 
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return Objects.equals(title, book.title) &&
+                Objects.equals(year, book.year) &&
+                Objects.equals(author, book.author) &&
+                Objects.equals(available, book.available);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, year, author, available);
+    }
 }

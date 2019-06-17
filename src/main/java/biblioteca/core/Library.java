@@ -1,11 +1,13 @@
 package biblioteca.core;
 
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Library {
     private Scanner sc = new Scanner(System.in);
     private int currentState = 0;
+    private ArrayList<Book> listOfBooks = new ArrayList<Book>();
 
     public void run() {
         this.sayWelcome();
@@ -45,5 +47,17 @@ public class Library {
 
     private void exitProgram() {
         System.exit(1);
+    }
+
+    public void addBook(Book newBook) {
+        this.listOfBooks.add(newBook);
+    }
+
+    public ArrayList<Book> getListOfBooks() {
+        return this.listOfBooks;
+    }
+
+    public void checkoutBookByIndex(int index) {
+        this.listOfBooks.get(index).setAvailable(false);
     }
 }
