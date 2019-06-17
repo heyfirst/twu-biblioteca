@@ -65,4 +65,15 @@ public class LibraryTest {
 
         assertThat(actual, containsString(expected));
     }
+
+    @Test
+    public void whenCallRunMethodAndEnterStringInConsoleShouldBeNotifyUserInvalidOption() {
+        systemInMock.provideLines("string"); // Enter "string" to system.in
+        this.library.run();
+
+        String actual = log.getLog();
+        String expected = "Please select a valid option!";
+
+        assertThat(actual, containsString(expected));
+    }
 }

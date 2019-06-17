@@ -1,17 +1,22 @@
 package biblioteca.core;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Library {
 
     public void run() {
-        this.sayWelcome();
-        Scanner sc = new Scanner(System.in);
-        this.showMenus();
-        int numberOfMenu = sc.nextInt();
+        try {
+            this.sayWelcome();
+            Scanner sc = new Scanner(System.in);
+            this.showMenus();
+            int numberOfMenu = sc.nextInt();
 
-        if (numberOfMenu == 1) {
-            this.showListOfBooks();
+            if (numberOfMenu == 1) {
+                this.showListOfBooks();
+            }
+        } catch(InputMismatchException exception) {
+            System.out.println("\n!Please select a valid option!");
         }
     }
 
@@ -25,8 +30,8 @@ public class Library {
     }
 
     public void showMenus() {
-        System.out.print("------------------- Menu -------------------");
-        System.out.print("> 1: List of books");
+        System.out.println("------------------- Menu -------------------");
+        System.out.println("> 1: List of books");
         System.out.print("Please Select Number: ");
     }
 }
