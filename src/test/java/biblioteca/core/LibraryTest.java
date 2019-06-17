@@ -6,6 +6,7 @@ import static org.hamcrest.CoreMatchers.containsString;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.ExpectedSystemExit;
 import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.contrib.java.lang.system.TextFromStandardInputStream;
 
@@ -17,6 +18,9 @@ public class LibraryTest {
 
     @Rule
     public final TextFromStandardInputStream systemInMock = TextFromStandardInputStream.emptyStandardInputStream();
+
+    @Rule
+    public final ExpectedSystemExit exit = ExpectedSystemExit.none();
 
     @Before
     public void setUp() {
@@ -46,7 +50,7 @@ public class LibraryTest {
 
     @Test
     public void whenCallShowMenusShouldBePrintOutMenus() {
-        this.library.showMenus();
+        this.library.showListOfMenus();
 
         String actual = log.getLog();
         String expected = "------------------- Menu -------------------";
@@ -57,7 +61,7 @@ public class LibraryTest {
     @Test
     public void whenCallRunMethodAndEnter1InConsoleShouldBeShowListOfBooks() {
         systemInMock.provideLines("1"); // Enter "1" to system.in
-        this.library.run();
+        this.library.selectMenu();
 
         String actual = log.getLog();
         String expected = "Clean Code (2008) Robert C. Martin\n"
@@ -69,11 +73,18 @@ public class LibraryTest {
     @Test
     public void whenCallRunMethodAndEnterStringInConsoleShouldBeNotifyUserInvalidOption() {
         systemInMock.provideLines("string"); // Enter "string" to system.in
-        this.library.run();
+        this.library.selectMenu();
 
         String actual = log.getLog();
         String expected = "Please select a valid option!";
 
         assertThat(actual, containsString(expected));
+    }
+
+    @Test
+    public void whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram() {
+        exit.expectSystemExit();
+        systemInMock.provideLines("-1"); // Enter "string" to system.in
+        this.library.run();
     }
 }

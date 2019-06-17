@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="biblioteca.core.LibraryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2019-06-17T07:40:40" hostname="THKanisornS.local" time="0.015">
+<testsuite name="biblioteca.core.LibraryTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2019-06-17T07:54:50" hostname="THKanisornS.local" time="0.016">
   <properties/>
-  <testcase name="whenCallRunMethodAndEnter1InConsoleShouldBeShowListOfBooks" classname="biblioteca.core.LibraryTest" time="0.011"/>
+  <testcase name="whenCallRunMethodAndEnter1InConsoleShouldBeShowListOfBooks" classname="biblioteca.core.LibraryTest" time="0.01"/>
   <testcase name="whenCallSayWelcomeMethodShouldBePrintOutWelcomeMessage" classname="biblioteca.core.LibraryTest" time="0.0"/>
   <testcase name="whenCallRunMethodAndEnterStringInConsoleShouldBeNotifyUserInvalidOption" classname="biblioteca.core.LibraryTest" time="0.001"/>
   <testcase name="whenCallShowAllBooksShouldBeShowListOfBooks" classname="biblioteca.core.LibraryTest" time="0.001"/>
   <testcase name="whenCallShowMenusShouldBePrintOutMenus" classname="biblioteca.core.LibraryTest" time="0.001"/>
-  <system-out><![CDATA[Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!
-------------------- Menu -------------------
-> 1: List of books
-Please Select Number: Clean Code (2008) Robert C. Martin
+  <testcase name="whenCallRunMethodAndEnter0InConsoleShouldBeExitTheProgram" classname="biblioteca.core.LibraryTest" time="0.002"/>
+  <system-out><![CDATA[Please Select Number: Clean Code (2008) Robert C. Martin
 The Refactoring (1999) Martin Fowler
 Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!
-Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!
-------------------- Menu -------------------
-> 1: List of books
 Please Select Number: 
 !Please select a valid option!
 Clean Code (2008) Robert C. Martin
 The Refactoring (1999) Martin Fowler
+------------------- Menu -------------------
+> 1: List of books
+Welcome to Biblioteca. Your one-step-shop for great book titles in Bangalore!
 ------------------- Menu -------------------
 > 1: List of books
 Please Select Number: ]]></system-out>

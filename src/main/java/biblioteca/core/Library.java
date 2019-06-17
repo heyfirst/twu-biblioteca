@@ -4,20 +4,16 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Library {
+    private Scanner sc = new Scanner(System.in);
+    private int currentState = 0;
 
     public void run() {
-        try {
-            this.sayWelcome();
-            Scanner sc = new Scanner(System.in);
-            this.showMenus();
-            int numberOfMenu = sc.nextInt();
-
-            if (numberOfMenu == 1) {
-                this.showListOfBooks();
-            }
-        } catch(InputMismatchException exception) {
-            System.out.println("\n!Please select a valid option!");
-        }
+        this.sayWelcome();
+        do {
+            this.showListOfMenus();
+            this.selectMenu();
+        } while (this.currentState != -1);
+        this.exitProgram();
     }
 
     public void sayWelcome() {
@@ -25,13 +21,29 @@ public class Library {
     }
 
     public void showListOfBooks() {
-        System.out.println(new Book("Clean Code", "2008","Robert C. Martin"));
-        System.out.println(new Book("The Refactoring", "1999","Martin Fowler"));
+        System.out.println(new Book("Clean Code", "2008", "Robert C. Martin"));
+        System.out.println(new Book("The Refactoring", "1999", "Martin Fowler"));
     }
 
-    public void showMenus() {
+    public void selectMenu() {
+        try {
+            System.out.print("Please Select Number: ");
+            this.currentState = this.sc.nextInt();
+
+            if (this.currentState == 1) {
+                this.showListOfBooks();
+            }
+        } catch (InputMismatchException exception) {
+            System.out.println("\n!Please select a valid option!");
+        }
+    }
+
+    public void showListOfMenus() {
         System.out.println("------------------- Menu -------------------");
         System.out.println("> 1: List of books");
-        System.out.print("Please Select Number: ");
+    }
+
+    private void exitProgram() {
+        System.exit(1);
     }
 }
