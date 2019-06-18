@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class LibraryTest {
-    Library library;
+    private Library library;
 
     @Before
     public void setUp() {
