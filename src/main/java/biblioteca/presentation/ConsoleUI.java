@@ -36,12 +36,14 @@ public class ConsoleUI {
 
     public void selectMenuOption() {
         try {
-            System.out.print("Please enter option number: ");
+            System.out.println("\nSelect Menu Option [1, 2, 9]:  ");
             this.select = this.sc.nextInt();
 
             if (this.select == 1) {
+                System.out.println("\n--------------- LIST OF BOOKS ---------------\n");
                 this.showListOfBook();
             } else if (this.select == 2) {
+                System.out.println("\n--------------- CHECKOUT BOOK ---------------\n");
                 this.checkOutBook();
             }
         } catch(InputMismatchException exception) {
@@ -50,12 +52,17 @@ public class ConsoleUI {
     }
 
     private void checkOutBook() {
-        System.out.print("Please enter book number: ");
-        this.select = this.sc.nextInt();
+        this.showListOfBook();
+        System.out.println("Please enter book number: ");
+        int bookIndex = this.sc.nextInt();
+
+        this.library.checkOut(bookIndex -1);
+        System.out.println("Thank you! Enjoy the book");
     }
 
     private void showListOfBook() {
         ArrayList<Book> books = this.library.getBooks();
+
         for(int i = 1; i <= books.size(); i++) {
             System.out.println(i + ". " + books.get(i - 1));
         }

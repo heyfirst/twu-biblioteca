@@ -1,0 +1,22 @@
+Welcome to Biblioteca.
+
+Please enter option number: 
+Please select a valid option!
+
+Please enter option number: 
+
+.--------------- LIST OF BOOKS ---------------
+
+*1. Clean Code (2008) Uncle Bob [AVAILABLE]
+32. The Refactoring (1999) Martin Fowler [AVAILABLE]
+------- Menus -------
+[1] List of Books
+[2] Checkout Book
+[9] Exit Program
+Welcome to Biblioteca.
+------- Menus -------
+[1] List of Books
+[2] Checkout Book
+[9] Exit Program
+
+Please enter option number: 
