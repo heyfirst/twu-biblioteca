@@ -12,8 +12,17 @@ public class Library {
         return this.books;
     }
 
-    public void checkOut(int index) {
-        this.books.get(index).setAvailable(false);
+    public String checkOut(int index) {
+        try {
+            if (this.books.get(index).isAvailable()) {
+                this.books.get(index).setAvailable(false);
+                return "Thank you! Enjoy your book!";
+            } else {
+                return "The book is not available.";
+            }
+        } catch (IndexOutOfBoundsException exception) {
+            return "The book is not appear in the shelf.";
+        }
     }
 
     public Book getBook(int index) {

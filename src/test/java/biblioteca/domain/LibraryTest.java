@@ -34,4 +34,31 @@ public class LibraryTest {
 
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void shouldBeReturnSuccessMessageWhenCheckedOutBook() {
+
+        String actual = this.library.checkOut(1);
+        String expected = "Thank you! Enjoy your book!";
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldBeReturnNotAvailableMessageWhenCheckedOutBook() {
+        this.library.checkOut(1);
+
+        String actual = this.library.checkOut(1);
+        String expected = "The book is not available.";
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldBeReturnBookNotAppearMessageWhenCheckedOutBook() {
+        String actual = this.library.checkOut(999);
+        String expected = "The book is not appear in the shelf.";
+
+        assertEquals(actual, expected);
+    }
 }

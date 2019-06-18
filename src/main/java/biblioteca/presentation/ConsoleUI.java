@@ -56,8 +56,8 @@ public class ConsoleUI {
         System.out.println("Please enter book number: ");
         int bookIndex = this.sc.nextInt();
 
-        this.library.checkOut(bookIndex -1);
-        System.out.println("Thank you! Enjoy the book");
+        String message = this.library.checkOut(bookIndex -1);
+        System.out.println(message);
     }
 
     private void showListOfBook() {
