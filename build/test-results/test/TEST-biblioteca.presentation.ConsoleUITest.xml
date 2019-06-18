@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="biblioteca.presentation.ConsoleUITest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-06-18T03:13:45" hostname="THKanisornS.local" time="0.016">
+<testsuite name="biblioteca.presentation.ConsoleUITest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-06-18T03:15:59" hostname="THKanisornS.local" time="0.02">
   <properties/>
-  <testcase name="shouldBeShowListOfBooksAfterWelcomeMessage" classname="biblioteca.presentation.ConsoleUITest" time="0.015"/>
-  <testcase name="shouldBePrintWelcomeMessageWhenStartProgram" classname="biblioteca.presentation.ConsoleUITest" time="0.001"/>
+  <testcase name="shouldBeShowListOfBooksAfterWelcomeMessage" classname="biblioteca.presentation.ConsoleUITest" time="0.02"/>
   <system-out><![CDATA[Welcome to Biblioteca.
-1. Clean Code
-2. Object Oriented Design
-Welcome to Biblioteca.
-1. Clean Code
-2. Object Oriented Design
+1. Clean Code (2008) Uncle Bob
+2. The Refactoring (1999) Martin Fowler
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

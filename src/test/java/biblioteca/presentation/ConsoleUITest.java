@@ -21,7 +21,7 @@ public class ConsoleUITest {
     @Test
     public void shouldBeShowListOfBooksAfterWelcomeMessage() {
         ConsoleUI.run();
-        assertThat(systemOutRule.getLog(), containsString("1. Clean Code\n2. Object Oriented Design"));
+        assertThat(systemOutRule.getLog(), containsString("1. Clean Code (2008) Uncle Bob\n2. The Refactoring (1999) Martin Fowler"));
     }
 
 }
