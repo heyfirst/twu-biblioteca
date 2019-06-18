@@ -30,6 +30,7 @@ public class ConsoleUI {
         System.out.println("------- Menus -------");
         System.out.println("[1] List of Books");
         System.out.println("[2] Checkout Book");
+        System.out.println("[3] Return Book");
 
         System.out.println("[9] Exit Program");
     }
@@ -45,25 +46,37 @@ public class ConsoleUI {
             } else if (this.select == 2) {
                 System.out.println("\n--------------- CHECKOUT BOOK ---------------\n");
                 this.checkOutBook();
+            } else if (this.select == 3) {
+                System.out.println("\n--------------- RETURN BOOK ---------------\n");
+                this.returnBook();
             }
-        } catch(InputMismatchException exception) {
+        } catch (InputMismatchException exception) {
             System.out.println("Please select a valid option!");
         }
     }
 
     private void checkOutBook() {
         this.showListOfBook();
-        System.out.println("Please enter book number: ");
+        System.out.println("Please enter book number to checkout: ");
         int bookIndex = this.sc.nextInt();
 
-        String message = this.library.checkOut(bookIndex -1);
+        String message = this.library.checkOut(bookIndex - 1);
+        System.out.println(message);
+    }
+
+    private void returnBook() {
+        this.showListOfBook();
+        System.out.println("Please enter book number to return: ");
+        int bookIndex = this.sc.nextInt();
+
+        String message = this.library.returnBook(bookIndex - 1);
         System.out.println(message);
     }
 
     private void showListOfBook() {
         ArrayList<Book> books = this.library.getBooks();
 
-        for(int i = 1; i <= books.size(); i++) {
+        for (int i = 1; i <= books.size(); i++) {
             System.out.println(i + ". " + books.get(i - 1));
         }
     }

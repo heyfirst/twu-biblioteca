@@ -4,7 +4,6 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
 
 public class LibraryTest {
     private Library library;
@@ -102,5 +101,4 @@ public class LibraryTest {
 
         assertEquals(actual, expected);
     }
-
 }
