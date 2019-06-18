@@ -1,16 +1,22 @@
 package biblioteca.domain;
 
+import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 
 public class LibraryTest {
+    Library library;
+
+    @Before
+    public void setUp() {
+        this.library = new Library();
+    }
+
     @Test
     public void shouldBeReturnListOfBookWhenCallGetBooksMethod() {
-        Library library = new Library();
-
-        ArrayList<Book> actual = library.getBooks();
+        ArrayList<Book> actual = this.library.getBooks();
         ArrayList<Book> expected = new ArrayList<Book>() {{
             add(new Book("Clean Code", "2008", "Uncle Bob"));
             add(new Book("The Refactoring", "1999", "Martin Fowler"));
@@ -21,10 +27,9 @@ public class LibraryTest {
 
     @Test
     public void shouldBeCheckedOutBookWhenCallCheckoutByIndex() {
-        Library library = new Library();
-        library.checkOut(1);
+        this.library.checkOut(1);
 
-        Book actual = library.getBook(1);
+        Book actual = this.library.getBook(1);
         Book expected = new Book("The Refactoring", "1999", "Martin Fowler", false);
 
         assertEquals(actual, expected);
