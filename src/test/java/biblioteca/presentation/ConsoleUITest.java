@@ -17,4 +17,11 @@ public class ConsoleUITest {
         ConsoleUI.run();
         assertThat(systemOutRule.getLog(), containsString("Welcome to Biblioteca."));
     }
+
+    @Test
+    public void shouldBeShowListOfBooksAfterWelcomeMessage() {
+        ConsoleUI.run();
+        assertThat(systemOutRule.getLog(), containsString("1. Clean Code\n2. Object Oriented Design"));
+    }
+
 }
