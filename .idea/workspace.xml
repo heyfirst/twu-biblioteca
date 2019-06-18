@@ -294,7 +294,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.BibliotecaApp">
+  <component name="RunManager" selected="Gradle.LibraryTest">
     <configuration name="BibliotecaApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="biblioteca.BibliotecaApp" />
       <module name="biblioteca.main" />
@@ -415,9 +415,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.LibraryTest" />
         <item itemvalue="Gradle.ConsoleUITest" />
         <item itemvalue="Application.BibliotecaApp" />
-        <item itemvalue="Gradle.LibraryTest" />
         <item itemvalue="Gradle.Tests in 'biblioteca.test'" />
         <item itemvalue="Gradle.LibraryTest.shouldBeCheckedOutBookWhenCallCheckoutByIndex" />
       </list>
