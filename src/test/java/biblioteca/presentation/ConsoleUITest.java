@@ -41,7 +41,7 @@ public class ConsoleUITest {
     public void shouldBeShowListOfBooksWhenSelectOption1() {
         systemInMock.provideLines("1");
         this.consoleUI.selectMenuOption();
-        assertThat(systemOutRule.getLog(), containsString("1. Clean Code (2008) Uncle Bob\n2. The Refactoring (1999) Martin Fowler"));
+        assertThat(systemOutRule.getLog(), containsString("1. Clean Code (2008) Uncle Bob [AVAILABLE]\n2. The Refactoring (1999) Martin Fowler [AVAILABLE]"));
     }
 
     @Test

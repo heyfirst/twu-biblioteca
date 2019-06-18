@@ -29,20 +29,35 @@ public class ConsoleUI {
     public void menuOptions() {
         System.out.println("------- Menus -------");
         System.out.println("[1] List of Books");
+        System.out.println("[2] Checkout Book");
+
         System.out.println("[9] Exit Program");
     }
 
     public void selectMenuOption() {
         try {
+            System.out.print("Please enter option number: ");
             this.select = this.sc.nextInt();
+
             if (this.select == 1) {
-                ArrayList<Book> books = this.library.getBooks();
-                for(int i = 1; i <= books.size(); i++) {
-                    System.out.println(i + ". " + books.get(i - 1));
-                }
+                this.showListOfBook();
+            } else if (this.select == 2) {
+                this.checkOutBook();
             }
         } catch(InputMismatchException exception) {
             System.out.println("Please select a valid option!");
+        }
+    }
+
+    private void checkOutBook() {
+        System.out.print("Please enter book number: ");
+        this.select = this.sc.nextInt();
+    }
+
+    private void showListOfBook() {
+        ArrayList<Book> books = this.library.getBooks();
+        for(int i = 1; i <= books.size(); i++) {
+            System.out.println(i + ". " + books.get(i - 1));
         }
     }
 }

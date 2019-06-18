@@ -6,11 +6,19 @@ public class Book {
     private String title;
     private String year;
     private String author;
+    private Boolean available = true;
 
     public Book(String title, String year, String author) {
         this.title = title;
         this.year = year;
         this.author = author;
+    }
+
+    public Book(String title, String year, String author, Boolean available) {
+        this.title = title;
+        this.year = year;
+        this.author = author;
+        this.available = available;
     }
 
     public String getTitle() {
@@ -37,6 +45,14 @@ public class Book {
         this.author = author;
     }
 
+    public Boolean getAvailable() {
+        return available;
+    }
+
+    public void setAvailable(Boolean available) {
+        this.available = available;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -44,16 +60,22 @@ public class Book {
         Book book = (Book) o;
         return Objects.equals(title, book.title) &&
                 Objects.equals(year, book.year) &&
-                Objects.equals(author, book.author);
+                Objects.equals(author, book.author) &&
+                Objects.equals(available, book.available);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, year, author);
+        return Objects.hash(title, year, author, available);
     }
 
     @Override
     public String toString() {
-        return this.title + " (" + this.year + ") " + this.author;
+        if (available) {
+            return this.title + " (" + this.year + ") " + this.author + " [AVAILABLE]";
+        } else {
+            return this.title + " (" + this.year + ") " + this.author + " [NO AVAILABLE]";
+        }
+
     }
 }
