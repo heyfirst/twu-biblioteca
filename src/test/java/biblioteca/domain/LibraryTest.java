@@ -73,4 +73,14 @@ public class LibraryTest {
 
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void shouldBeReturnSuccessMessageWhenReturnedBook() {
+        this.library.checkOut(1);
+
+        String actual = this.library.returnBook(1);
+        String expected = "Thank you for returning the book!";
+
+        assertEquals(actual, expected);
+    }
 }

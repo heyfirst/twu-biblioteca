@@ -33,7 +33,8 @@ public class Library {
         return this.books.get(index);
     }
 
-    public void returnBook(int index) {
+    public String returnBook(int index) {
         this.books.get(index).setAvailable(true);
+        return "Thank you for returning the book!";
     }
 }
