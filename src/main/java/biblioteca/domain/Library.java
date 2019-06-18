@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Library {
     private static final String CHECKOUT_SUCCESS_MESSAGE = "Thank you! Enjoy your book!";
     private static final String CHECKOUT_NOT_AVAILABLE_MESSAGE = "The book is not available.";
-    private static final String CHECKOUT_BOOK_NOT_APPEAR_MESSAGE = "The book is not appear in the shelf.";
+    private static final String BOOK_NOT_APPEAR_MESSAGE = "The book is not appear in the shelf.";
 
     ArrayList<Book> books = new ArrayList<Book>() {{
         add(new Book("Clean Code", "2008", "Uncle Bob"));
@@ -25,7 +25,7 @@ public class Library {
                 return CHECKOUT_NOT_AVAILABLE_MESSAGE;
             }
         } catch (IndexOutOfBoundsException exception) {
-            return CHECKOUT_BOOK_NOT_APPEAR_MESSAGE;
+            return BOOK_NOT_APPEAR_MESSAGE;
         }
     }
 
@@ -34,7 +34,16 @@ public class Library {
     }
 
     public String returnBook(int index) {
-        this.books.get(index).setAvailable(true);
-        return "Thank you for returning the book!";
+        try {
+            if (!this.books.get(index).isAvailable()) {
+                this.books.get(index).setAvailable(true);
+                return "Thank you for returning the book!";
+            } else {
+                return "This is not a valid book to return.";
+            }
+        } catch (IndexOutOfBoundsException exception) {
+            return BOOK_NOT_APPEAR_MESSAGE;
+        }
+
     }
 }
