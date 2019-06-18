@@ -61,4 +61,16 @@ public class LibraryTest {
 
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void shouldBeReturnBookToLibraryWhenCallReturnBook() {
+        this.library.checkOut(1);
+
+        this.library.returnBook(1);
+
+        Book actual = this.library.getBook(1);
+        Book expected = new Book("The Refactoring", "1999", "Martin Fowler", true);
+
+        assertEquals(actual, expected);
+    }
 }

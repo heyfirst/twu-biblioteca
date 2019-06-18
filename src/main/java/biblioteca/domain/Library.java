@@ -32,4 +32,8 @@ public class Library {
     public Book getBook(int index) {
         return this.books.get(index);
     }
+
+    public void returnBook(int index) {
+        this.books.get(index).setAvailable(true);
+    }
 }
