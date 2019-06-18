@@ -1,10 +1,18 @@
 package biblioteca.presentation;
 
+import biblioteca.domain.Book;
+import biblioteca.domain.Library;
+
+import java.util.ArrayList;
+
 public class ConsoleUI {
     public static void run() {
+        Library library = new Library();
         System.out.println("Welcome to Biblioteca.");
 
-        System.out.println("1. Clean Code (2008) Uncle Bob");
-        System.out.println("2. The Refactoring (1999) Martin Fowler");
+        ArrayList<Book> books = library.getBooks();
+        for(int i = 1; i <= books.size(); i++) {
+            System.out.println(i + ". " + books.get(i - 1));
+        }
     }
 }
