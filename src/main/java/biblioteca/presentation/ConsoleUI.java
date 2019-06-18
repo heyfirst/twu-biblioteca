@@ -8,18 +8,35 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleUI {
-    public static void run() {
-        Library library = new Library();
-        Scanner sc = new Scanner(System.in);
-        int select = 0;
+    private int select = 0;
+    private Library library = new Library();
+    private Scanner sc = new Scanner(System.in);
 
+    public void run() {
+        this.welcomeMessage();
+        this.menuOptions();
+
+        do {
+            this.selectMenuOption();
+        } while (this.select != 9);
+        System.exit(1);
+    }
+
+    public void welcomeMessage() {
         System.out.println("Welcome to Biblioteca.");
+    }
+
+    public void menuOptions() {
         System.out.println("------- Menus -------");
         System.out.println("[1] List of Books");
+        System.out.println("[9] Exit Program");
+    }
+
+    public void selectMenuOption() {
         try {
-            select = sc.nextInt();
-            if (select == 1) {
-                ArrayList<Book> books = library.getBooks();
+            this.select = this.sc.nextInt();
+            if (this.select == 1) {
+                ArrayList<Book> books = this.library.getBooks();
                 for(int i = 1; i <= books.size(); i++) {
                     System.out.println(i + ". " + books.get(i - 1));
                 }
