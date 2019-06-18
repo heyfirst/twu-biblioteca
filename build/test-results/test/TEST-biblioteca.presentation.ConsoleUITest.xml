@@ -1,14 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="biblioteca.presentation.ConsoleUITest" tests="3" skipped="0" failures="0" errors="0" timestamp="2019-06-18T03:44:30" hostname="THKanisornS.local" time="0.013">
+<testsuite name="biblioteca.presentation.ConsoleUITest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-06-18T03:47:22" hostname="THKanisornS.local" time="0.054">
   <properties/>
-  <testcase name="shouldBeShowListOfBooksAfterWelcomeMessage" classname="biblioteca.presentation.ConsoleUITest" time="0.009"/>
-  <testcase name="shouldBePrintWelcomeMessageWhenStartProgram" classname="biblioteca.presentation.ConsoleUITest" time="0.001"/>
-  <testcase name="shouldBeShowListOfMenuWhenStartProgram" classname="biblioteca.presentation.ConsoleUITest" time="0.002"/>
+  <testcase name="shouldBePrintWelcomeMessageWhenStartProgram" classname="biblioteca.presentation.ConsoleUITest" time="0.038"/>
+  <testcase name="shouldBeRaiseInvalidOptionWhenSelectOptionString" classname="biblioteca.presentation.ConsoleUITest" time="0.003"/>
+  <testcase name="shouldBeShowListOfBooksWhenSelectOption1" classname="biblioteca.presentation.ConsoleUITest" time="0.007"/>
+  <testcase name="shouldBeShowListOfMenuWhenStartProgram" classname="biblioteca.presentation.ConsoleUITest" time="0.004"/>
   <system-out><![CDATA[Welcome to Biblioteca.
 ------- Menus -------
 [1] List of Books
 1. Clean Code (2008) Uncle Bob
 2. The Refactoring (1999) Martin Fowler
+Welcome to Biblioteca.
+------- Menus -------
+[1] List of Books
+Please select a valid option!
 Welcome to Biblioteca.
 ------- Menus -------
 [1] List of Books

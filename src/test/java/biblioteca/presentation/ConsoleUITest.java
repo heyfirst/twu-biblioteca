@@ -29,10 +29,17 @@ public class ConsoleUITest {
     }
 
     @Test
-    public void shouldBeShowListOfBooksAfterWelcomeMessage() {
+    public void shouldBeShowListOfBooksWhenSelectOption1() {
         systemInMock.provideLines("1");
         ConsoleUI.run();
         assertThat(systemOutRule.getLog(), containsString("1. Clean Code (2008) Uncle Bob\n2. The Refactoring (1999) Martin Fowler"));
+    }
+
+    @Test
+    public void shouldBeRaiseInvalidOptionWhenSelectOptionString() {
+        systemInMock.provideLines("string");
+        ConsoleUI.run();
+        assertThat(systemOutRule.getLog(), containsString("Please select a valid option!"));
     }
 
 }

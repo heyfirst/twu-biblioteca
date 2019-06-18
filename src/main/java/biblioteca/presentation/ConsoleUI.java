@@ -4,6 +4,7 @@ import biblioteca.domain.Book;
 import biblioteca.domain.Library;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ConsoleUI {
@@ -15,12 +16,16 @@ public class ConsoleUI {
         System.out.println("Welcome to Biblioteca.");
         System.out.println("------- Menus -------");
         System.out.println("[1] List of Books");
-        select = sc.nextInt();
-        if (select == 1) {
-            ArrayList<Book> books = library.getBooks();
-            for(int i = 1; i <= books.size(); i++) {
-                System.out.println(i + ". " + books.get(i - 1));
+        try {
+            select = sc.nextInt();
+            if (select == 1) {
+                ArrayList<Book> books = library.getBooks();
+                for(int i = 1; i <= books.size(); i++) {
+                    System.out.println(i + ". " + books.get(i - 1));
+                }
             }
+        } catch(InputMismatchException exception) {
+            System.out.println("Please select a valid option!");
         }
     }
 }
