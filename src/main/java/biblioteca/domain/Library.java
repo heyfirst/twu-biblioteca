@@ -58,4 +58,12 @@ public class Library {
     public ArrayList<Movie> getMovies() {
         return this.movies;
     }
+
+    public void checkOutMovie(int index) {
+        this.movies.get(index).setAvailable(false);
+    }
+
+    public Movie getMovie(int index) {
+        return this.movies.get(index);
+    }
 }

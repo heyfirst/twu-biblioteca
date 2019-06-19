@@ -114,4 +114,14 @@ public class LibraryTest {
 
         assertEquals(actual, expected);
     }
+
+    @Test
+    public void shouldBeCheckedOutMovieWhenCheckOutMovie() {
+        this.library.checkOutMovie(1);
+
+        Movie actual = this.library.getMovie(1);
+        Movie expected = new Movie("Need for speed", "2014", "Scott Waugh", 9, false);
+
+        assertEquals(actual, expected);
+    }
 }
