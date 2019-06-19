@@ -66,4 +66,8 @@ public class Library {
     public Movie getMovie(int index) {
         return this.movies.get(index);
     }
+
+    public Boolean login(String username, String password) {
+        return username.equals("XYZ-1234") && password.equals("ThoughtWorks");
+    }
 }

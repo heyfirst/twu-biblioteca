@@ -5,6 +5,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 
+import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
 public class LibraryTest {
@@ -123,5 +124,15 @@ public class LibraryTest {
         Movie expected = new Movie("Need for speed", "2014", "Scott Waugh", 9, false);
 
         assertEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldBeLoggedInToLibrary() {
+        String username = "XYZ-1234";
+        String password = "ThoughtWorks";
+
+        Boolean result = this.library.login(username, password);
+
+        assertTrue(result);
     }
 }
