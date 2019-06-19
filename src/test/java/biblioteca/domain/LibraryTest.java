@@ -2,7 +2,9 @@ package biblioteca.domain;
 
 import org.junit.Before;
 import org.junit.Test;
+
 import java.util.ArrayList;
+
 import static org.junit.Assert.assertEquals;
 
 public class LibraryTest {
@@ -98,6 +100,17 @@ public class LibraryTest {
     public void shouldBeReturnBookNotAppearMessageWhenReturnedBook() {
         String actual = this.library.returnBook(999);
         String expected = "The book is not appear in the shelf.";
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
+    public void shouldBeReturnListOfBookWhenCallGetMovies() {
+        ArrayList<Movie> actual = this.library.getMovies();
+        ArrayList<Movie> expected = new ArrayList<Movie>() {{
+            add(new Movie("Avengers: End game", "2019", "Brothers of Russo", 10, true));
+            add(new Movie("Need for speed", "2014", "Scott Waugh", 9, true));
+        }};
 
         assertEquals(actual, expected);
     }

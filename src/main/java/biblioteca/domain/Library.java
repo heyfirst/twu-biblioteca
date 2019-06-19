@@ -11,9 +11,14 @@ public class Library {
 
     private static final String BOOK_NOT_APPEAR_MESSAGE = "The book is not appear in the shelf.";
 
-    ArrayList<Book> books = new ArrayList<Book>() {{
+    private ArrayList<Book> books = new ArrayList<Book>() {{
         add(new Book("Clean Code", "2008", "Uncle Bob"));
         add(new Book("The Refactoring", "1999", "Martin Fowler"));
+    }};
+
+    private ArrayList<Movie> movies = new ArrayList<Movie>() {{
+        add(new Movie("Avengers: End game", "2019", "Brothers of Russo", 10, true));
+        add(new Movie("Need for speed", "2014", "Scott Waugh", 9, true));
     }};
 
     public ArrayList<Book> getBooks() {
@@ -25,7 +30,7 @@ public class Library {
     }
 
     public String checkOut(int index) {
-        if (index < 0 || index > this.books.size() -1) {
+        if (index < 0 || index > this.books.size() - 1) {
             return BOOK_NOT_APPEAR_MESSAGE;
         }
 
@@ -38,7 +43,7 @@ public class Library {
     }
 
     public String returnBook(int index) {
-        if (index < 0 || index > this.books.size() -1) {
+        if (index < 0 || index > this.books.size() - 1) {
             return BOOK_NOT_APPEAR_MESSAGE;
         }
 
@@ -48,5 +53,9 @@ public class Library {
 
         this.books.get(index).setAvailable(true);
         return RETURN_SUCCESS_MESSAGE;
+    }
+
+    public ArrayList<Movie> getMovies() {
+        return this.movies;
     }
 }
