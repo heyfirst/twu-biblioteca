@@ -38,16 +38,15 @@ public class Library {
     }
 
     public String returnBook(int index) {
-        try {
-            if (!this.books.get(index).isAvailable()) {
-                this.books.get(index).setAvailable(true);
-                return RETURN_SUCCESS_MESSAGE;
-            } else {
-                return RETURN_NOT_AVAILABLE_MESSAGE;
-            }
-        } catch (IndexOutOfBoundsException exception) {
+        if (index < 0 || index > this.books.size() -1) {
             return BOOK_NOT_APPEAR_MESSAGE;
         }
 
+        if (this.books.get(index).isAvailable()) {
+            return RETURN_NOT_AVAILABLE_MESSAGE;
+        }
+
+        this.books.get(index).setAvailable(true);
+        return RETURN_SUCCESS_MESSAGE;
     }
 }
