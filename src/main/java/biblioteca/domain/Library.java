@@ -70,4 +70,8 @@ public class Library {
     public Boolean login(String username, String password) {
         return username.equals("XYZ-1234") && password.equals("ThoughtWorks");
     }
+
+    public User findUserByUsername(String username) {
+        return new User("XYZ-1234", "ThoughtWorks");
+    }
 }

@@ -135,4 +135,14 @@ public class LibraryTest {
 
         assertTrue(result);
     }
+
+    @Test
+    public void shouldBeReturnUserWhenFindUserByUsername() {
+        String username = "XYZ-1234";
+
+        User actual = this.library.findUserByUsername(username);
+        User expected = new User("XYZ-1234", "ThoughtWorks");
+
+        assertEquals(actual, expected);
+    }
 }
