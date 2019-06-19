@@ -21,16 +21,16 @@ public class Library {
     }
 
     public String checkOut(int index) {
-        try {
-            if (this.books.get(index).isAvailable()) {
-                this.books.get(index).setAvailable(false);
-                return CHECKOUT_SUCCESS_MESSAGE;
-            } else {
-                return CHECKOUT_NOT_AVAILABLE_MESSAGE;
-            }
-        } catch (IndexOutOfBoundsException exception) {
+        if (index < 0 || index > this.books.size() -1) {
             return BOOK_NOT_APPEAR_MESSAGE;
         }
+
+        if (!this.books.get(index).isAvailable()) {
+            return CHECKOUT_NOT_AVAILABLE_MESSAGE;
+        }
+
+        this.books.get(index).setAvailable(false);
+        return CHECKOUT_SUCCESS_MESSAGE;
     }
 
     public Book getBook(int index) {
