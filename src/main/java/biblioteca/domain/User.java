@@ -5,10 +5,21 @@ import java.util.Objects;
 public class User {
     private String username;
     private String password;
+    private String name;
+    private String email;
+    private String phone;
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+    }
+
+    public User(String username, String password, String name, String email, String phone) {
+        this.username = username;
+        this.password = password;
+        this.name = name;
+        this.email = email;
+        this.phone = phone;
     }
 
     public String getUsername() {
@@ -39,5 +50,10 @@ public class User {
     @Override
     public int hashCode() {
         return Objects.hash(username, password);
+    }
+
+    @Override
+    public String toString() {
+        return "[" + this.username + "] " + this.name + " | " + this.email + " | " + this.phone;
     }
 }
