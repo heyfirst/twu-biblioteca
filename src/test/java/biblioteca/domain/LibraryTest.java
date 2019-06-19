@@ -107,6 +107,17 @@ public class LibraryTest {
     }
 
     @Test
+    public void shouldBeReturnBookIsNotYourOwnWhenReturnedBookWithWrongUser() {
+        this.library.checkOut(1, this.user);
+        User user = new User("XYZ-1234", "ThoughtWorks");
+
+        String actual = this.library.returnBook(1, user);
+        String expected = "This is not your own book for return.";
+
+        assertEquals(actual, expected);
+    }
+
+    @Test
     public void shouldBeReturnListOfBookWhenCallGetMovies() {
         ArrayList<Movie> actual = this.library.getMovies();
         ArrayList<Movie> expected = new ArrayList<Movie>() {{

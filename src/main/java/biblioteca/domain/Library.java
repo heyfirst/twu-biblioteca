@@ -57,6 +57,10 @@ public class Library {
             return RETURN_NOT_AVAILABLE_MESSAGE;
         }
 
+        if (this.books.get(index).getOwnedBy() != user) {
+            return "This is not your own book for return.";
+        }
+
         this.books.get(index).setAvailable(true);
         this.books.get(index).setOwnedBy(null);
         return RETURN_SUCCESS_MESSAGE;
