@@ -7,6 +7,7 @@ public class Book {
     private String year;
     private String author;
     private Boolean available = true;
+    private User ownedBy;
 
     public Book(String title, String year, String author) {
         this.title = title;
@@ -77,5 +78,13 @@ public class Book {
             return this.title + " (" + this.year + ") " + this.author + " [NO AVAILABLE]";
         }
 
+    }
+
+    public void setOwnedBy(User user) {
+        this.ownedBy = user;
+    }
+
+    public User getOwnedBy() {
+        return ownedBy;
     }
 }

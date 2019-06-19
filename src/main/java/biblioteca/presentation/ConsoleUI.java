@@ -60,7 +60,7 @@ public class ConsoleUI {
         System.out.println("Please enter book number to checkout: ");
         int bookIndex = this.sc.nextInt();
 
-        String message = this.library.checkOut(bookIndex - 1);
+        String message = this.library.checkOut(bookIndex - 1, null);
         System.out.println(message);
     }
 
@@ -69,7 +69,7 @@ public class ConsoleUI {
         System.out.println("Please enter book number to return: ");
         int bookIndex = this.sc.nextInt();
 
-        String message = this.library.returnBook(bookIndex - 1);
+        String message = this.library.returnBook(bookIndex - 1, null);
         System.out.println(message);
     }
 

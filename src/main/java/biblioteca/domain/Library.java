@@ -33,7 +33,7 @@ public class Library {
         return this.books.get(index);
     }
 
-    public String checkOut(int index) {
+    public String checkOut(int index, User user) {
         if (index < 0 || index > this.books.size() - 1) {
             return BOOK_NOT_APPEAR_MESSAGE;
         }
@@ -43,10 +43,12 @@ public class Library {
         }
 
         this.books.get(index).setAvailable(false);
+        this.books.get(index).setOwnedBy(user);
+
         return CHECKOUT_SUCCESS_MESSAGE;
     }
 
-    public String returnBook(int index) {
+    public String returnBook(int index, User user) {
         if (index < 0 || index > this.books.size() - 1) {
             return BOOK_NOT_APPEAR_MESSAGE;
         }
@@ -56,6 +58,7 @@ public class Library {
         }
 
         this.books.get(index).setAvailable(true);
+        this.books.get(index).setOwnedBy(null);
         return RETURN_SUCCESS_MESSAGE;
     }
 

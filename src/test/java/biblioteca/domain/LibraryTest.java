@@ -10,10 +10,12 @@ import static org.junit.Assert.assertEquals;
 
 public class LibraryTest {
     private Library library;
+    private User user;
 
     @Before
     public void setUp() {
         this.library = new Library();
+        this.user = new User("XYZ-1234", "ThoughtWorks");
     }
 
     @Test
@@ -29,7 +31,7 @@ public class LibraryTest {
 
     @Test
     public void shouldBeCheckedOutBookWhenCallCheckoutByIndex() {
-        this.library.checkOut(1);
+        this.library.checkOut(1, this.user);
 
         Book actual = this.library.getBook(1);
         Book expected = new Book("The Refactoring", "1999", "Martin Fowler", false);
@@ -39,8 +41,7 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnSuccessMessageWhenCheckedOutBook() {
-
-        String actual = this.library.checkOut(1);
+        String actual = this.library.checkOut(1, this.user);
         String expected = "Thank you! Enjoy your book!";
 
         assertEquals(actual, expected);
@@ -48,9 +49,9 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnNotAvailableMessageWhenCheckedOutBook() {
-        this.library.checkOut(1);
+        this.library.checkOut(1, this.user);
 
-        String actual = this.library.checkOut(1);
+        String actual = this.library.checkOut(1, this.user);
         String expected = "The book is not available.";
 
         assertEquals(actual, expected);
@@ -58,7 +59,7 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnBookNotAppearMessageWhenCheckedOutBook() {
-        String actual = this.library.checkOut(999);
+        String actual = this.library.checkOut(999, this.user);
         String expected = "The book is not appear in the shelf.";
 
         assertEquals(actual, expected);
@@ -66,9 +67,9 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnBookToLibraryWhenCallReturnBook() {
-        this.library.checkOut(1);
+        this.library.checkOut(1, this.user);
 
-        this.library.returnBook(1);
+        this.library.returnBook(1, this.user);
 
         Book actual = this.library.getBook(1);
         Book expected = new Book("The Refactoring", "1999", "Martin Fowler", true);
@@ -78,9 +79,9 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnSuccessMessageWhenReturnedBook() {
-        this.library.checkOut(1);
+        this.library.checkOut(1, this.user);
 
-        String actual = this.library.returnBook(1);
+        String actual = this.library.returnBook(1, this.user);
         String expected = "Thank you for returning the book!";
 
         assertEquals(actual, expected);
@@ -88,10 +89,10 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnNotAvailableMessageWhenReturnedBook() {
-        this.library.checkOut(1);
-        this.library.returnBook(1);
+        this.library.checkOut(1, this.user);
+        this.library.returnBook(1, this.user);
 
-        String actual = this.library.returnBook(1);
+        String actual = this.library.returnBook(1, this.user);
         String expected = "This is not a valid book to return.";
 
         assertEquals(actual, expected);
@@ -99,7 +100,7 @@ public class LibraryTest {
 
     @Test
     public void shouldBeReturnBookNotAppearMessageWhenReturnedBook() {
-        String actual = this.library.returnBook(999);
+        String actual = this.library.returnBook(999, this.user);
         String expected = "The book is not appear in the shelf.";
 
         assertEquals(actual, expected);
