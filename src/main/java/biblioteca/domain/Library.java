@@ -10,6 +10,7 @@ public class Library {
     private static final String RETURN_NOT_AVAILABLE_MESSAGE = "This is not a valid book to return.";
 
     private static final String BOOK_NOT_APPEAR_MESSAGE = "The book is not appear in the shelf.";
+    private static final String RETURN_NOT_YOURS_OWN_BOOK_MESSAGE = "This is not your own book for return.";
 
     private ArrayList<Book> books = new ArrayList<Book>() {{
         add(new Book("Clean Code", "2008", "Uncle Bob"));
@@ -58,7 +59,7 @@ public class Library {
         }
 
         if (this.books.get(index).getOwnedBy() != user) {
-            return "This is not your own book for return.";
+            return RETURN_NOT_YOURS_OWN_BOOK_MESSAGE;
         }
 
         this.books.get(index).setAvailable(true);
