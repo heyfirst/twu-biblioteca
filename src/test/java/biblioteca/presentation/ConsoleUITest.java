@@ -50,11 +50,4 @@ public class ConsoleUITest {
         this.consoleUI.selectMenuOption();
         assertThat(systemOutRule.getLog(), containsString("Please select a valid option!"));
     }
-
-    @Test
-    public void shouldBeExitProgramWhenSelectOptionExit() {
-        exit.expectSystemExit();
-        systemInMock.provideLines("9");
-        this.consoleUI.run();
-    }
 }

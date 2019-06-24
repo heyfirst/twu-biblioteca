@@ -23,7 +23,13 @@ public class Library {
     }};
 
     private ArrayList<User> users = new ArrayList<User>() {{
-        add(new User("XYZ-1234", "ThoughtWorks"));
+        add(new User(
+                "XYZ-1234",
+                "ThoughtWorks",
+                "Kanisorn Sutham",
+                "kanisorn.sutham@thoughtWorks.com",
+                "+66 (0) 88 252 9594"
+        ));
     }};
 
     public ArrayList<Book> getBooks() {
